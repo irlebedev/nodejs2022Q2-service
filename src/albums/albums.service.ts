@@ -7,7 +7,7 @@ import { TracksService } from 'src/tracks/tracks.service';
 
 @Injectable()
 export class AlbumsService {
-  constructor(private tracksService: TracksService) {}
+  constructor(private readonly tracksService: TracksService) {}
   private albums: Album[] = [];
 
   create(createAlbumDto: CreateAlbumDto) {

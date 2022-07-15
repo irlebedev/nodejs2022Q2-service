@@ -7,9 +7,9 @@ import { Favourite, FavouritesResponse } from './entities/favourite.entity';
 @Injectable()
 export class FavouritesService {
   constructor(
-    private albumsService: AlbumsService,
-    private artistsService: ArtistsService,
-    private tracksService: TracksService,
+    private readonly albumsService: AlbumsService,
+    private readonly artistsService: ArtistsService,
+    private readonly tracksService: TracksService,
   ) {}
   private favourites: Favourite = { artists: [], albums: [], tracks: [] };
 

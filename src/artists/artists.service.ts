@@ -7,7 +7,7 @@ import { TracksService } from 'src/tracks/tracks.service';
 
 @Injectable()
 export class ArtistsService {
-  constructor(private tracksService: TracksService) {}
+  constructor(private readonly tracksService: TracksService) {}
   private artists: Artist[] = [];
 
   create(createArtistDto: CreateArtistDto) {

@@ -22,5 +22,5 @@ export class CreateTrackDto {
 
   @IsInt()
   @Min(1)
-  duration: number; // integer number
+  duration: number;
 }

@@ -85,7 +85,7 @@ export class ArtistsService {
 
     this.artists = this.artists.filter((artist) => artist.id !== id);
 
-    const trackToUpdate = this.tracksService.findByArtistId(id);
+    const trackToUpdate = this.tracksService.findOneByArtistId(id);
 
     if (trackToUpdate) {
       this.tracksService.update(trackToUpdate.id, {

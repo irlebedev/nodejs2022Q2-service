@@ -84,11 +84,11 @@ export class TracksService {
     this.tracks = this.tracks.filter((track) => track.id !== id);
   }
 
-  findByAlbumId(id: string) {
+  findOneByAlbumId(id: string) {
     return this.tracks.find((track) => track.albumId === id);
   }
 
-  findByArtistId(id: string) {
+  findOneByArtistId(id: string) {
     return this.tracks.find((track) => track.artistId === id);
   }
 }

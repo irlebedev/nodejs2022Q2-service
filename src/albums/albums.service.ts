@@ -85,7 +85,7 @@ export class AlbumsService {
 
     this.albums = this.albums.filter((album) => album.id !== id);
 
-    const trackToUpdate = this.tracksService.findByAlbumId(id);
+    const trackToUpdate = this.tracksService.findOneByAlbumId(id);
 
     if (trackToUpdate) {
       this.tracksService.update(trackToUpdate.id, {

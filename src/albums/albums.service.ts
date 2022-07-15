@@ -7,7 +7,7 @@ import { TracksService } from 'src/tracks/tracks.service';
 
 @Injectable()
 export class AlbumsService {
-  constructor(private trackService: TracksService) {}
+  constructor(private tracksService: TracksService) {}
   private albums: Album[] = [];
 
   create(createAlbumDto: CreateAlbumDto) {
@@ -85,10 +85,10 @@ export class AlbumsService {
 
     this.albums = this.albums.filter((album) => album.id !== id);
 
-    const trackToUpdate = this.trackService.findByAlbumId(id);
+    const trackToUpdate = this.tracksService.findByAlbumId(id);
 
     if (trackToUpdate) {
-      this.trackService.update(trackToUpdate.id, {
+      this.tracksService.update(trackToUpdate.id, {
         ...trackToUpdate,
         albumId: null,
       });
